@@ -5,7 +5,7 @@
 # Based on: https://github.com/mooz/percol#zsh-history-search
 # Get peco from: https://github.com/peco/peco
 
-if which peco &> /dev/null; then
+if [ -x $HOME/.local/bin/peco ]; then
   function peco_select_history() {
     local tac
     (($+commands[gtac])) && tac="gtac" || { (($+commands[tac])) && tac="tac" \
